@@ -14,8 +14,9 @@ arr.forEach(function(el) {
   newElement.setAttribute('src', `./images/IMG_${el}.jpg`);
   newElement.style.width = '90%';
   newElement.style.maxWidth = '600px';
+  newElement.style.display = 'block';
   newElement.style.border = '1px solid #000';
   newElement.style.boxShadow = '5px 5px 5px #AAA';
-  newElement.style.marginBottom = '2em';
+  newElement.style.margin = '0 auto 2em';
   entry.appendChild(newElement);
 });
