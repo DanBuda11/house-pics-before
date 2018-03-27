@@ -1,22 +1,17 @@
 const entry = document.getElementById('entry');
 
-const imageStart = 2747;
-const imageEnd = 2803;
-
 let arr = [];
 
 for (var i = 2747; i < 2804; i++) {
   arr.push(i);
 }
 
-arr.forEach(function(el) {
-  let newElement = document.createElement('img');
-  newElement.setAttribute('src', `./images/IMG_${el}.jpg`);
-  newElement.style.width = '90%';
-  newElement.style.maxWidth = '600px';
-  newElement.style.display = 'block';
-  newElement.style.border = '1px solid #000';
-  newElement.style.boxShadow = '5px 5px 5px #AAA';
-  newElement.style.margin = '0 auto 2em';
-  entry.appendChild(newElement);
+arr.forEach(function(value) {
+  let newEl = document.createElement('img');
+  newEl.setAttribute('src', `./images/IMG_${value}.jpg`);
+  newEl.setAttribute('style', 'width:90%; display:block; border:1px solid #000; margin:0 auto 2em;');
+  newEl.style.maxWidth = '600px';
+  newEl.style.boxShadow = '5px 5px 5px #AAA';
+  newEl.style.borderRadius = '2%';
+  entry.appendChild(newEl);
 });
